@@ -60,7 +60,8 @@ export const refreshAccessToken = asyncHandler( async(req, res, next) => {
 
     const options = {
         httpOnly: true,
-        secure: true
+        secure: true,
+        sameSite: "None"
     }
 
     return res.status(201)
@@ -170,7 +171,8 @@ export const handleLogout = asyncHandler( async(req, res, next) => {
 
     const options = {
         httpOnly: true,
-        secure: true
+        secure: true,
+        sameSite: "None"
     }
 
 
